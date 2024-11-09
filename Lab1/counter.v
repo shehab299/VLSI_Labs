@@ -1,17 +1,16 @@
 module counter (
-
-    clk wire input,
-    reset wire input,
-    enable wire input,
-    up_down wire input,
-    count reg output [3:0]
+    input wire clk,
+    input wire reset,
+    input wire up_down,
+    input wire enable,
+    output reg [3:0] count
 );
 
 
 always @(posedge clk) begin
 
     if (reset) begin 
-        if (up_down = 1) begin 
+        if (up_down) begin 
             count <= 4'b0000;
         end 
         else begin 
