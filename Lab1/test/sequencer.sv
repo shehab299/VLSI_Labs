@@ -1,5 +1,5 @@
 
-class sequencer extends uvm_sequencer#(seq_item);
+class sequencer extends uvm_sequencer#(sequence_item);
   `uvm_component_utils(sequencer)
   
   function new(string name = "sequencer", uvm_component parent);
@@ -16,4 +16,4 @@ class sequencer extends uvm_sequencer#(seq_item);
     super.connect_phase(phase);    
   endfunction: connect_phase
   
-endclass: alu_sequencer
+endclass: sequencer

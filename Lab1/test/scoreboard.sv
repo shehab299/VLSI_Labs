@@ -49,4 +49,4 @@ class scoreboard extends uvm_scoreboard;
   endtask: compare
   
   
-endclass: alu_scoreboard
+endclass: scoreboard

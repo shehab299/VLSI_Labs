@@ -14,5 +14,5 @@ class sequence_item extends uvm_sequence_item;
         super.new(name);
     endfunction: new
 
-endclass: alu_sequence_item
+endclass: sequence_item
 

@@ -4,7 +4,7 @@ class test extends uvm_test;
 
     // UVM Components
     env env_inst;
-    seqnce seq_inst;
+    base_sequence seq_inst;
 
     // Constructor
 
@@ -32,8 +32,8 @@ class test extends uvm_test;
 
         phase.raise_objection(this);
 
-        seq_inst = seqnce::type_id::create("seq_inst");
-        seq_inst.start(env_inst.sequencer);
+        seq_inst = base_sequence::type_id::create("seq_inst");
+        seq_inst.start(env_inst.agent_inst.sqncer_inst);
 
         phase.drop_objection(this);  
 

@@ -23,7 +23,7 @@ class env extends uvm_env;
     // Function: connect_phase
     function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
-        agent.monitor.monitor_port.connect(sb_inst.scoreboard_port);
+        agent_inst.mon_inst.monitor_port.connect(sb_inst.scoreboard_port);
     endfunction: connect_phase
 
     // Function: run_phase
