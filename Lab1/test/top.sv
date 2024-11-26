@@ -41,7 +41,7 @@ end
 //////////Interface Instance//////////
 
 counter_interface dut_if(
-    .clock(clock),
+    .clock(clock)
 );
 
 initial begin

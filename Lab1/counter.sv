@@ -1,12 +1,12 @@
 module counter (
-    input  logic clk,
+    input  logic clock,
     input  logic reset,
     input  logic up_down,
     input  logic enable,
     output logic [3:0] count
 );
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clock) begin
     if (reset) begin
         count <= up_down ? 4'b0000 : 4'b1111;
     end else if (enable) begin
